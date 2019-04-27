@@ -30,5 +30,39 @@ ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install mocha@latest --s
 ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install @wdio/dot-reporter --save-dev
 ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install loglevel-plugin-prefix
 
+######## Run the code #############
+npm test will run the test
 
-npm test will run the test 
+######## Pause, Debug Mode & Selectors #############
+browser.pause(7000);
+browser.debug()
+ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$ DEBUG=true npm test -- --spec=test/ajaxClickTest.js
+
+Install Ranorex selocity chrome plugin
+1.it can search for css in DOM
+2.it can generate css very easily
+
+######## Targeting & Skipping Specific Tests #############
+it.skip   //skip
+it.only  //specific
+
+######## CSS Extraction #############
+const height = $('#udemy-promo-thumbnail').getCSSProperty('height')
+console.log(height);
+
+######## Mocha Hooks #############
+beforeEach(function() {
+	browser.url('/Contact-Us/contactus.html');
+})
+
+describe(.....)
+
+######## Send Keys like Selenium #############
+browser.setValue("[name='first_name']", firstName);
+
+############# Handling Browser Window Tabs #############
+browser.switchWindow('WebDriver | Contact Us');  // URL or Title of webpage in argument
+
+############# Version 5 changes#############
+$('#contact-us').click();  // instead of browser.click()
+browser.closeWindow(); //instead of close()
