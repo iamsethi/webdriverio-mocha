@@ -66,3 +66,6 @@ browser.switchWindow('WebDriver | Contact Us');  // URL or Title of webpage in a
 ############# Version 5 changes#############
 $('#contact-us').click();  // instead of browser.click()
 browser.closeWindow(); //instead of close()
+
+expect(ContactUs_Page.successfulSubmissionHeaderText).to.equal("Thank You for your Message!");
+expect(url).to.include('Contact-Us', 'URL Mismatch');
