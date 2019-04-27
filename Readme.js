@@ -29,3 +29,6 @@ ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install chai@latest --sa
 ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install mocha@latest --save-dev
 ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install @wdio/dot-reporter --save-dev
 ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install loglevel-plugin-prefix
+
+
+npm test will run the test 
