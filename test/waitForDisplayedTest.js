@@ -4,9 +4,7 @@ beforeEach(function() {
 
 describe('Validate text is present', function() {
   it('Verify text exists within the loading div container', function () {
-    this.timeout(20000);
-
-    var text = browser.waitForDisplayed('#hidden-text', 2000);
+    var text = $('#hidden-text').waitForDisplayed(10000);
     console.log(text);
     });
 });
