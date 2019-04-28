@@ -1,13 +1,13 @@
 beforeEach(function() {
+	browser.maximizeWindow();
 	browser.url("/Accordion/index.html");
 })
 
 describe('Validate the loading functionality works correctly', function() {
-	it('Verify relevant text LOADING COMPLETE appears after a period of time', function () {
-		this.timeout(20000);
-		browser.waitUntil(function () {
-			return browser.getText('#hidden-text') === 'LOADING COMPLETE.'
-		console.log(browser.getText('#hidden-text'));
-		}, 2000, 'expected text to be different!');
+
+	it('Verify relevant text LOADING COMPLETE appears after a period of time',function() {
+			browser.waitUntil(() => {
+				return $('#hidden-text').getText() === 'LOADING COMPLETE.'
+			}, 15000, 'expected text to be different after 15s');
 	});
 });

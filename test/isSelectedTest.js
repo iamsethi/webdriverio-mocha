@@ -4,32 +4,32 @@ beforeEach(function() {
 
 describe('Test Selected Dropdown Menus, Checkboxes & Radio Buttons', function() {
   it('Dropdown item Java is selected therefore should return true', function(done) {
-    var isSelected = browser.isSelected("option[value='java']");
+    var isSelected = $("option[value='java']").isSelected();
     console.log(isSelected);
     expect(isSelected).to.equal(true);
   });
-  
+
   it('Dropdown item maven is not selected therefore should return false', function(done) {
-    var isSelected = browser.isSelected("option[value='maven']");
+    var isSelected = $("option[value='maven']").isSelected();
     console.log(isSelected);
-    expect(isSelected).to.equal(false);    
+    expect(isSelected).to.equal(false);
   });
-  
+
   it('Option2 is not selected therefore should return false', function(done) {
-    var isSelected = browser.isSelected("input[value='option-2']");
+    var isSelected = $("input[value='option-2']").isSelected();
     console.log(isSelected);
-    expect(isSelected).to.equal(false);   
+    expect(isSelected).to.equal(false);
   });
-  
+
   it('Option3 is selected therefore should return true', function(done) {
-    var isSelected = browser.isSelected("input[value='option-3']");
+    var isSelected = $("input[value='option-3']").isSelected();
     console.log(isSelected);
-    expect(isSelected).to.equal(true);    
+    expect(isSelected).to.equal(true);
   });
-  
+
   it('Radio button pumpkin is selected therefore should be true', function(done) {
-    var isSelected = browser.isSelected("input[value='pumpkin']");
+    var isSelected = $("input[value='pumpkin']").isSelected();
     console.log(isSelected);
-    expect(isSelected).to.equal(true);    
+    expect(isSelected).to.equal(true);
   });
 });

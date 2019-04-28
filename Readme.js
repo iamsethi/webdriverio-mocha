@@ -69,3 +69,29 @@ browser.closeWindow(); //instead of close()
 
 expect(ContactUs_Page.successfulSubmissionHeaderText).to.equal("Thank You for your Message!");
 expect(url).to.include('Contact-Us', 'URL Mismatch');
+
+############# waitForDisplayed#############
+$('#hidden-text').waitForDisplayed(2000);
+
+############# waitUntil#############
+browser.waitUntil(() => {
+				return $('#hidden-text').getText() === 'LOADING COMPLETE.'
+			}, 15000, 'expected text to be different after 15s');
+
+############# waitForDisplayed isSelected isFocused#############
+$('#hidden-text').waitForDisplayed(2000);
+$("option[value='maven']").isSelected();
+$('#checkboxes label:nth-of-type(1) [type]').isFocused();
+
+############# isExisting isEnabled isDisplayedInViewport##########
+$('#not-displayed').isExisting();
+$("option[value='orange']").isEnabled();
+$('#not-displayed').isDisplayedInViewport();
+
+############# waitForExist##########
+$(selector).waitForExist(5000)
+
+#############getText, isVisible, isExisting#############
+$(selector).getText()
+$(selector).isDisplayed()
+$(selector).isExisting()
