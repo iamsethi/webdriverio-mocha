@@ -28,6 +28,9 @@ ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install @wdio/selenium-s
 ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install chai@latest --save-dev
 ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install mocha@latest --save-dev
 ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install @wdio/dot-reporter --save-dev
+ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install --save-dev sync-request
+ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install @wdio/allure-reporter --save-dev
+ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install -g allure-commandline --save-dev 
 ketan@ketan-Inspiron-3521:~/git/webdriverio-mocha$  npm install loglevel-plugin-prefix
 
 ######## Run the code #############
@@ -57,8 +60,8 @@ beforeEach(function() {
 
 describe(.....)
 
-######## Send Keys like Selenium #############
-browser.setValue("[name='first_name']", firstName);
+######## setValue i.e send Keys like Selenium #############
+$("[name='first_name']").setValue(firstName);
 
 ############# Handling Browser Window Tabs #############
 browser.switchWindow('WebDriver | Contact Us');  // URL or Title of webpage in argument
@@ -78,8 +81,7 @@ browser.waitUntil(() => {
 				return $('#hidden-text').getText() === 'LOADING COMPLETE.'
 			}, 15000, 'expected text to be different after 15s');
 
-############# waitForDisplayed isSelected isFocused#############
-$('#hidden-text').waitForDisplayed(2000);
+#############isSelected isFocused#############
 $("option[value='maven']").isSelected();
 $('#checkboxes label:nth-of-type(1) [type]').isFocused();
 
@@ -88,10 +90,18 @@ $('#not-displayed').isExisting();
 $("option[value='orange']").isEnabled();
 $('#not-displayed').isDisplayedInViewport();
 
-############# waitForExist##########
+#############waitForDisplayed waitForExist##########
+$('#hidden-text').waitForDisplayed(2000);
 $(selector).waitForExist(5000)
 
 #############getText, isVisible, isExisting#############
 $(selector).getText()
 $(selector).isDisplayed()
 $(selector).isExisting()
+
+#############Custom Commands#############
+browser.addCommand("submitDataViaContactUsForm", function (firstName, lastName, emailAddress, comments) {
+.....
+})
+//use it in your tests
+browser.submitDataViaContactUsForm('joe', 'Blogs', contactDetail.email, contactDetail.body);

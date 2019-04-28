@@ -1,0 +1,123 @@
+{
+  "uid" : "1634c80f49ad0267",
+  "name" : "Alter the width of the video",
+  "fullName" : "Video test.Alter the width of the video",
+  "historyId" : "b6640cd27dc1098cd06f241325ec3411",
+  "time" : {
+    "start" : 1556446901450,
+    "stop" : 1556446904932,
+    "duration" : 3482
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/url",
+      "time" : {
+        "start" : 1556446901459,
+        "stop" : 1556446904886,
+        "duration" : 3427
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "c18b66015491d966",
+        "name" : "Request",
+        "source" : "c18b66015491d966.json",
+        "type" : "application/json",
+        "size" : 61
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/execute",
+      "time" : {
+        "start" : 1556446904901,
+        "stop" : 1556446904930,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e52b8fbef2baa1ea",
+        "name" : "Request",
+        "source" : "e52b8fbef2baa1ea.json",
+        "type" : "application/json",
+        "size" : 177
+      }, {
+        "uid" : "342349a0fde0afb",
+        "name" : "Response",
+        "source" : "342349a0fde0afb.json",
+        "type" : "application/json",
+        "size" : 7
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Video test"
+  }, {
+    "name" : "testClass",
+    "value" : "Video test"
+  }, {
+    "name" : "testMethod",
+    "value" : "Alter the width of the video"
+  }, {
+    "name" : "package",
+    "value" : "Video test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "34109127480040b3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1556446783692,
+        "stop" : 1556446788230,
+        "duration" : 4538
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1634c80f49ad0267.json",
+  "parameterValues" : [ "chrome" ]
+}

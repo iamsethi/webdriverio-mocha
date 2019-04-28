@@ -1,0 +1,4 @@
+{
+  "script": "return (() => {\n\t\t\tvar video = document.querySelector('#video1');\n\t\t\treturn video.style.width = \"300px\";\n\t\t}).apply(null, arguments)",
+  "args": []
+}

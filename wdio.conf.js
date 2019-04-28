@@ -18,19 +18,9 @@ exports.config = {
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
     runner: 'local',
-    //
-    // ==================
-    // Specify Test Files
-    // ==================
-    // Define which test specs should run. The pattern is relative to the directory
-    // from which `wdio` was called. Notice that, if you are calling `wdio` from an
-    // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
-    // directory is where your package.json resides, so `wdio` will be called from there.
-    //
     specs: [
       'test/contactUsTest.js'
   ],
-  // Patterns to exclude.
   exclude: [
       './pageObjects/*_Page.js'
   ],
@@ -48,7 +38,16 @@ exports.config = {
     connectionRetryCount: 3,
     services: ['selenium-standalone'],
     framework: 'mocha',
-     reporters: ['dot'],
+    reporters: ['dot', 'allure'],
+
+    reporterOptions: {
+        allure: {
+            outputDir: './reports/allure-results/',
+            disableWebdriverStepsReporting: false,
+            disableWebdriverScreenshotsReporting: false,
+            useCucumberStepReporter: false
+        }
+},
     mochaOpts: {
         ui: 'bdd',
         timeout: timeout

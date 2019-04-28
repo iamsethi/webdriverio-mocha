@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1556446901448' stop='1556446904934'>
+    <name>Video test</name>
+    <title>Video test</title>
+    <test-cases>
+        <test-case start='1556446901450' status='passed' stop='1556446904932'>
+            <name>Alter the width of the video</name>
+            <title>Alter the width of the video</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1556446901459' status='passed' stop='1556446904886'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='8e33e832-5a51-4ef4-aa74-b526253d19a8-attachment.json' type='application/json' size='61'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1556446904901' status='passed' stop='1556446904930'>
+                    <name>POST /session/:sessionId/execute</name>
+                    <title>POST /session/:sessionId/execute</title>
+                    <attachments>
+                        <attachment title='Request' source='39c1d34d-455d-4906-b7dc-89f698ea2f15-attachment.json' type='application/json' size='177'/>
+                        <attachment title='Response' source='62dfb054-8217-46c5-ab64-187059ddb0a9-attachment.json' type='application/json' size='7'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

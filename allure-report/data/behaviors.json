@@ -1,0 +1,17 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Alter the width of the video",
+    "uid" : "1634c80f49ad0267",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1556446901450,
+      "stop" : 1556446904932,
+      "duration" : 3482
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  } ]
+}
